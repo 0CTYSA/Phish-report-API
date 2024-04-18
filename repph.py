@@ -64,6 +64,3 @@ save_results_to_files(contact_info_bulk)
 # Iniciar proceso de baja para múltiples URLs maliciosas y guardar resultados
 takedown_responses_bulk = start_takedown_bulk(api_key, urls_to_check)
 save_results_to_files(takedown_responses_bulk)
-
-# Nota: Este código no se puede ejecutar aquí debido a las restricciones de red del entorno actual.
-# Deberás ejecutarlo en tu entorno local.
