@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Este script en Python está diseñado para automatizar el proceso de reportar URLs potencialmente maliciosas a través de la API de Phish.Report. Facilita el envío de informes de phishing en masa y almacena los resultados en archivos JSON dentro de una carpeta local.
+Este script en Python está diseñado para automatizar el proceso de reportar URLs potencialmente maliciosas a través de la API de [Phish.Report](https://takedown.phish.report/docs). Facilita el envío de informes de phishing en masa y almacena los resultados en archivos JSON dentro de una carpeta local.
 
 ## Características
 
