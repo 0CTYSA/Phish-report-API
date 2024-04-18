@@ -15,7 +15,8 @@ Este script en Python está diseñado para automatizar el proceso de reportar UR
 Para utilizar este script, necesitas lo siguiente:
 
 - Python 3
-- `requests` biblioteca instalada en Python (instala usando `pip install requests`) -`json`bibliteca instalada en python (`pip install json`)
+- `requests` biblioteca instalada en Python (instala usando `pip install requests`)
+- `json` bibliteca instalada en python (instala usando `pip install json`)
 - Una clave API válida de Phish.Report
 
 ## Configuración
