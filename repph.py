@@ -3,13 +3,16 @@ import json
 import os
 
 # Función para obtener la información de contacto de abuso para múltiples URLs
+
+
 def get_abuse_contact_info_bulk(api_key, urls):
     contact_info_results = {}
     for url in urls:
         headers = {
             'Authorization': f'Bearer {api_key}'
         }
-        response = requests.get(f'https://phish.report/api/v0/hosting', params={'url': url}, headers=headers)
+        response = requests.get(
+            f'https://phish.report/api/v0/hosting', params={'url': url}, headers=headers)
         if response.ok:
             contact_info_results[url] = response.json()
         else:
@@ -17,6 +20,8 @@ def get_abuse_contact_info_bulk(api_key, urls):
     return contact_info_results
 
 # Función para iniciar la baja de múltiples URLs
+
+
 def start_takedown_bulk(api_key, urls):
     takedown_responses = {}
     for url in urls:
@@ -28,7 +33,8 @@ def start_takedown_bulk(api_key, urls):
             'url': url,
             'ignore_duplicates': True
         }
-        response = requests.post(f'https://phish.report/api/v0/cases', json=payload, headers=headers)
+        response = requests.post(
+            f'https://phish.report/api/v0/cases', json=payload, headers=headers)
         if response.ok:
             takedown_responses[url] = response.json()
         else:
@@ -36,14 +42,18 @@ def start_takedown_bulk(api_key, urls):
     return takedown_responses
 
 # Función para guardar los resultados en archivos JSON dentro de una carpeta 'resultados'
+
+
 def save_results_to_files(results, folder='resultados'):
     if not os.path.exists(folder):
         os.makedirs(folder)
     for url, data in results.items():
-        domain = url.split('//')[-1].split('/')[0]  # Extraer el dominio de la URL
+        # Extraer el dominio de la URL
+        domain = url.split('//')[-1].split('/')[0]
         file_path = os.path.join(folder, f"{domain}.json")
         with open(file_path, 'w') as file:
             json.dump(data, file, indent=4)
+
 
 # Solicitar al usuario que ingrese las URLs a través de la terminal
 urls_to_check = []
