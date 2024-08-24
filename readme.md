@@ -1,48 +1,48 @@
 # Phish Report Automation Tool
 
-## Descripción
+## Description
 
-Este script en Python está diseñado para automatizar el proceso de reportar URLs potencialmente maliciosas a través de la API de [Phish.Report](https://takedown.phish.report/docs). Facilita el envío de informes de phishing en masa y almacena los resultados en archivos JSON dentro de una carpeta local.
+This Python script is designed to automate the process of reporting potentially malicious URLs through the [Phish.Report](https://takedown.phish.report/docs) API. It facilitates mass phishing report submissions and stores the results in JSON files within a local folder.
 
-## Características
+## Features
 
-- **Reporte en Masa**: Permite reportar hasta 10 URLs a la vez.
-- **Automatización de Takedowns**: Inicia automáticamente los procesos de takedown para URLs identificadas como maliciosas.
-- **Almacenamiento Local de Resultados**: Guarda la información de contacto de abuso y las respuestas del takedown en archivos JSON.
+- **Mass Reporting**: Allows you to report up to 10 URLs at a time.
+- **Takedown Automation**: Automatically initiates takedown processes for URLs identified as malicious.
+- **Local Result Storage**: Saves abuse contact information and takedown responses in JSON files.
 
-## Pre-requisitos
+## Prerequisites
 
-Para utilizar este script, necesitas lo siguiente:
+To use this script, you need the following:
 
 - Python 3
-- `requests` biblioteca instalada en Python (instala usando `pip install requests`)
-- `json` bibliteca instalada en python (instala usando `pip install json`)
-- Una clave API válida de Phish.Report
+- `requests` library installed in Python (install using `pip install requests`)
+- `json` library installed in Python (install using `pip install json`)
+- A valid Phish.Report API key
 
-## Configuración
+## Setup
 
-1. Clona este repositorio o descarga los archivos en tu máquina local.
-2. Abre el script en tu IDE o editor de texto favorito y reemplaza `'your_real_api_key_here'` con tu clave API real.
-3. Asegúrate de que las bibliotecas `requests` y `json` esten instaladas.
+1. Clone this repository or download the files to your local machine.
+2. Open the script in your favorite IDE or text editor and replace `'your_real_api_key_here'` with your actual API key.
+3. Ensure that the `requests` and `json` libraries are installed.
 
-## Uso
+## Usage
 
-Para ejecutar el script, sigue estos pasos:
+To run the script, follow these steps:
 
-1. Abre una terminal o línea de comandos.
-2. Navega hasta el directorio donde se encuentra el script.
-3. Ejecuta el script con `python repph.py`.
-4. Sigue las instrucciones en pantalla para ingresar las URLs que deseas reportar.
-5. Revisa la carpeta "resultados" para ver los archivos JSON con los detalles de los reportes.
+1. Open a terminal or command prompt.
+2. Navigate to the directory where the script is located.
+3. Run the script with `python repph.py`.
+4. Follow the on-screen instructions to input the URLs you want to report.
+5. Check the "results" folder to view the JSON files containing the report details.
 
-## `.gitignore` Configuración
+## `.gitignore` Configuration
 
-Se ha configurado un archivo `.gitignore` para excluir la carpeta 'resultados' y su contenido del repositorio.
+A `.gitignore` file has been configured to exclude the 'results' folder and its contents from the repository.
 
-## Advertencia
+## Warning
 
-Utiliza este script con cautela y asegúrate de que solo se reporten URLs que hayas verificado como maliciosas.
+Use this script with caution and ensure that only URLs you have verified as malicious are reported.
 
-## Soporte
+## Support
 
-Si encuentras algún problema o tienes alguna sugerencia, por favor abre un issue en este repositorio.
+If you encounter any issues or have suggestions, please open an issue in this repository.
